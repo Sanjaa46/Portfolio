@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link href="./assets/output.css" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <style>
         /* Custom scrollbar for that terminal feel */
         ::-webkit-scrollbar {
@@ -46,25 +47,34 @@
                 <div class="size-6 text-primary">
                     <span class="material-symbols-outlined text-[24px]">terminal</span>
                 </div>
-                <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] font-mono">&lt;Sanjmyatav
-                    /&gt;
+                <h2 
+                class="text-white text-lg font-bold leading-tight tracking-[-0.015em] font-mono">
+                &lt;Sanjmyatav /&gt;
                 </h2>
             </div>
             <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                 <div class="flex items-center gap-9">
                     <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        data-i18n="about_nav"
                         href="#about">About</a>
                     <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        data-i18n="stack_nav"    
                         href="#stack">Stack</a>
                     <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
-                        href="#projects">Projects</a>
+                        href="#projects"
+                        data-i18n="projects_nav">Projects</a>
                     <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
-                        href="#experience">Experience</a>
+                        href="#experience"
+                        data-i18n="experience_nav">Experience</a>
                 </div>
                 <button
                     class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
-                    <span class="truncate">Contact</span>
+                    <span data-i18n="contact_button" class="truncate">Contact</span>
                 </button>
+                <select id="lang-switcher" class="bg-background-dark border border-border-dark rounded-md px-2 py-1 text-sm text-slate-300 outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 focus:ring-offset-background-dark">
+                    <option value="en">en</option>
+                    <option value="mn">mn</option>
+                </select>
             </div>
             <div class="md:hidden text-white">
                 <span class="material-symbols-outlined">menu</span>
@@ -86,29 +96,38 @@
                                     class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                             </span>
-                            <span class="text-xs font-mono text-slate-400">Open to new opportunities</span>
+                            <span 
+                                data-i18n="status_text"
+                                class="text-xs font-mono text-slate-400">
+                                Open to new opportunities
+                            </span>
                         </div>
                         <h1
                             class="text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-[-0.033em]">
-                            <span>Hi, I am </span>
-                            Sanjmyatav <br />
-                            <span class="text-slate-400">Backend Developer.</span>
+                            
+                            <span data-i18n="greeting">Hi, I am</span>
+                            <span data-i18n="name">Sanjmyatav</span><br />
+                            
+                            <span class="text-slate-400" data-i18n="role">
+                                Backend Developer.
+                            </span>
                         </h1>
                         <p
+                            data-i18n="intro_text"
                             class="text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-2xl border-l-2 border-primary pl-6">
-                            I design and deploy secure API systems. Specializing in High-Throughput APIs, Distributed
-                            Systems, and OAuth2 Implementation. Building scalable architecture for the modern web.
+                            I build APIs, containerize services, and deploy real infrastructure.
+                            Learning by shipping, not by watching.
                         </p>
                         <div class="flex flex-wrap gap-4 pt-4">
                             <button onclick="viewGithub()"
                                 class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 transition-all text-white text-base font-bold gap-2">
                                 <span class="material-symbols-outlined text-[20px]">code</span>
-                                <span>View GitHub</span>
+                                <span data-i18n="github_button">View GitHub</span>
                             </button>
                             <button
                                 class="flex items-center justify-center rounded-lg h-12 px-6 bg-charcoal-light border border-border-dark hover:border-primary/50 text-white hover:text-primary transition-all text-base font-bold gap-2">
                                 <span class="material-symbols-outlined text-[20px]">download</span>
-                                <span>Download CV</span>
+                                <span data-i18n="download_cv">Download CV</span>
                             </button>
                         </div>
                     </div>
@@ -117,9 +136,14 @@
                 <section class="scroll-mt-24" id="about">
                     <div class="flex items-center gap-4 mb-8">
                         <span class="h-px w-8 bg-primary"></span>
-                        <h2 class="text-white text-2xl font-bold tracking-tight">About</h2>
+                        <h2 
+                            class="text-white text-2xl font-bold tracking-tight" data-i18n="about_title">
+                            About
+                        </h2>
                     </div>
-                    <p class="text-slate-400 text-lg leading-relaxed max-w-3xl">
+                    <p 
+                    class="text-slate-400 text-lg leading-relaxed max-w-3xl"
+                    data-i18n="about_description">
                         Мэдээллийн технологийн бакалавр зэрэгтэй бөгөөд программ хангамж, мэдээллийн систем, сүлжээний
                         талаар
                         үндсэн мэдлэгтэй. Хэрэглэгчийн хэрэгцээнд нийцсэн үр дүнтэй шийдлүүдийг боловсруулахад идэвхтэй
@@ -133,7 +157,7 @@
                 <section class="flex flex-col gap-6" id="stack">
                     <div class="flex items-center gap-4 mb-2">
                         <span class="h-px w-8 bg-primary"></span>
-                        <h2 class="text-white text-2xl font-bold tracking-tight">Tech Stack</h2>
+                        <h2 class="text-white text-2xl font-bold tracking-tight" data-i18n="stack_nav">Tech Stack</h2>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                         <div
@@ -389,7 +413,7 @@
                     </div>
                     <div
                         class="p-4 rounded-lg bg-background-dark border border-border-dark font-mono text-xs text-slate-500">
-                        <p class="mb-2 text-slate-300">// Currently exploring:</p>
+                        <p class="mb-2 text-slate-300" data-i18n="currently_exploring">// Currently exploring:</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 rounded bg-charcoal-light text-primary">CI/CD</span>
                             <span class="px-2 py-1 rounded bg-charcoal-light text-primary">K8s</span>
@@ -401,7 +425,7 @@
                 <section class="scroll-mt-24" id="projects">
                     <div class="flex items-center gap-4 mb-8">
                         <span class="h-px w-8 bg-primary"></span>
-                        <h2 class="text-white text-2xl font-bold tracking-tight">Projects</h2>
+                        <h2 class="text-white text-2xl font-bold tracking-tight" data-i18n="projects_nav">Projects</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="repos">
                         <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300 cursor-pointer">
@@ -489,6 +513,57 @@
     </div>
 
     <script>
+        const translations = {
+            mn: {
+                intro_text: "Би API хөгжүүлэлт, системийн контейнержуулалт болон дэд бүтцийн бодит шийдлүүдийг бүтээдэг.",
+                about_nav: "Тухай",
+                stack_nav: "Чадварууд",
+                projects_nav: "Төслүүд",
+                experience_nav: "Туршлага",
+                contact_button: "Холбоо барих",
+                status_text: "Шинэ боломжуудыг эрэлхийлж байна",
+                greeting: "Сайн уу, намайг",
+                name: "Санжмятав гэдэг",
+                role: "Backend хөгжүүлэгч.",
+                github_button: "Github үзэх",
+                download_cv: "CV татах",
+                about_title: "Миний тухай",
+                about_description: "Мэдээллийн технологийн бакалавр зэрэгтэй бөгөөд программ хангамж, мэдээллийн систем, сүлжээний талаар үндсэн мэдлэгтэй. Хэрэглэгчийн хэрэгцээнд нийцсэн үр дүнтэй шийдлүүдийг боловсруулахад идэвхтэй оролцохыг хүсдэг. Мэргэжлийн ур чадвараа тасралтгүй хөгжүүлж, бүтээлч, найрсаг хамт олонд нэгдэхийг зорьж байна.",
+                currently_exploring: "// Одоогоор судалж буй зүйлс:"
+            },
+            en: {
+                intro_text: "I build APIs, containerize services, and deploy real infrastructure.\n                            Learning by shipping, not by watching.",
+                about_nav: "About",
+                stack_nav: "Stack",
+                projects_nav: "Projects",
+                experience_nav: "Experience",
+                contact_button: "Contact",
+                status_text: "Open to new opportunities",
+                greeting: "Hi, I am",
+                name: "Sanjmyatav",
+                role: "Backend Developer.",
+                github_button: "View Github",
+                download_cv: "Download CV",
+                about_title: "About",
+                about_description: "I hold a Bachelor’s degree in Information Technology with a strong foundation in software development, information systems, and networking. I am passionate about building efficient, user-centric solutions and am dedicated to continuous professional growth. I am eager to join a creative and collaborative team.",
+                currently_exploring: "// Currently exploring:"
+            }
+        };
+
+        const switchLanguage = (lang) => {
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                el.textContent = translations[lang][key];
+            });
+        };
+
+        document.getElementById("lang-switcher").addEventListener("change", (e) => {
+            switchLanguage(e.target.value);
+        });
+
+        switchLanguage("en");
+
+
         function viewGithub() {
             window.open("https://github.com/sanjaa46", "_blank");
         }
