@@ -1,0 +1,8 @@
+node_modules/
+assets/output.css
+.git/
+.gitignore
+README.md
+docker-compose.yml
+.env
+.env.*
