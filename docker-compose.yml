@@ -2,7 +2,6 @@ services:
   portfolio:
     build: .
     restart: unless-stopped
-    # No ports exposed — traffic comes only through Cloudflare Tunnel
 
   cloudflared:
     image: cloudflare/cloudflared:latest
