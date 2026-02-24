@@ -68,19 +68,20 @@
                 <div class="size-6 text-primary">
                     <span class="material-symbols-outlined text-[24px]">terminal</span>
                 </div>
-                <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] font-mono">&lt;dev/root&gt;
+                <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] font-mono">&lt;Sanjmyatav
+                    /&gt;
                 </h2>
             </div>
             <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                 <div class="flex items-center gap-9">
                     <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
-                        href="#expertise">Expertise</a>
+                        href="#about">About</a>
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        href="#stack">Stack</a>
                     <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
                         href="#projects">Projects</a>
                     <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
-                        href="#notes">Notes</a>
-                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium leading-normal"
-                        href="#stack">Stack</a>
+                        href="#experience">Experience</a>
                 </div>
                 <button
                     class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
@@ -111,8 +112,9 @@
                         </div>
                         <h1
                             class="text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-[-0.033em]">
-                            Backend Engineer <br />
-                            <span class="text-slate-400">System Architect.</span>
+                            <span>Hi, I am </span>
+                            Sanjmyatav <br />
+                            <span class="text-slate-400">Backend Developer.</span>
                         </h1>
                         <p
                             class="text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-2xl border-l-2 border-primary pl-6">
@@ -120,7 +122,7 @@
                             Systems, and OAuth2 Implementation. Building scalable architecture for the modern web.
                         </p>
                         <div class="flex flex-wrap gap-4 pt-4">
-                            <button
+                            <button onclick="viewGithub()"
                                 class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 transition-all text-white text-base font-bold gap-2">
                                 <span class="material-symbols-outlined text-[20px]">code</span>
                                 <span>View GitHub</span>
@@ -133,274 +135,299 @@
                         </div>
                     </div>
                 </section>
-                <!-- Core Expertise -->
-                <section class="scroll-mt-24" id="expertise">
+                <!-- About -->
+                <section class="scroll-mt-24" id="about">
                     <div class="flex items-center gap-4 mb-8">
                         <span class="h-px w-8 bg-primary"></span>
-                        <h2 class="text-white text-2xl font-bold tracking-tight">Core Expertise</h2>
+                        <h2 class="text-white text-2xl font-bold tracking-tight">About</h2>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Card 1 -->
+                    <p class="text-slate-400 text-lg leading-relaxed max-w-3xl">
+                        Мэдээллийн технологийн бакалавр зэрэгтэй бөгөөд программ хангамж, мэдээллийн систем, сүлжээний
+                        талаар
+                        үндсэн мэдлэгтэй. Хэрэглэгчийн хэрэгцээнд нийцсэн үр дүнтэй шийдлүүдийг боловсруулахад идэвхтэй
+                        оролцохыг
+                        хүсдэг. Мэргэжлийн ур чадвараа тасралтгүй хөгжүүлж, бүтээлч, найрсаг хамт олонд нэгдэхийг зорьж
+                        байна.
+                    </p>
+
+                </section>
+                <!-- Tech Stack -->
+                <section class="flex flex-col gap-6" id="stack">
+                    <div class="flex items-center gap-4 mb-2">
+                        <span class="h-px w-8 bg-primary"></span>
+                        <h2 class="text-white text-2xl font-bold tracking-tight">Tech Stack</h2>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                         <div
-                            class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300">
-                            <div
-                                class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                                <span class="material-symbols-outlined text-[28px]">dns</span>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <h3 class="text-white text-xl font-bold">API Architecture</h3>
-                                <p class="text-slate-400 text-sm leading-relaxed">
-                                    Designing RESTful and gRPC APIs optimized for high concurrency and low latency.
-                                    Utilizing protobufs for efficient data serialization.
-                                </p>
-                            </div>
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <g clip-path="url(#a)">
+                                    <path fill="url(#b)"
+                                        d="M49.64 0C24.254 0 25.839 11.009 25.839 11.009l.028 11.406h24.225v3.424H16.245S0 23.997 0 49.61c0 25.615 14.179 24.707 14.179 24.707h8.462V62.432s-.457-14.18 13.952-14.18H60.62s13.5.219 13.5-13.046V13.273S76.17 0 49.64 0M36.282 7.67a4.354 4.354 0 0 1 4.358 4.358 4.356 4.356 0 0 1-6.027 4.028 4.35 4.35 0 0 1-2.69-4.028 4.355 4.355 0 0 1 4.359-4.358" />
+                                    <path fill="url(#c)"
+                                        d="M50.36 99.48c25.387 0 23.802-11.009 23.802-11.009l-.028-11.405H49.908V73.64h33.847S100 75.485 100 49.869c0-25.615-14.179-24.706-14.179-24.706H77.36v11.886s.457 14.179-13.952 14.179H39.379S25.88 51.009 25.88 64.274v21.933S23.83 99.48 50.36 99.48m13.359-7.67a4.355 4.355 0 0 1-4.028-6.026 4.35 4.35 0 0 1 4.028-2.69 4.355 4.355 0 0 1 4.027 6.027 4.355 4.355 0 0 1-4.027 2.69" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="b" x1="9.61" x2="59.167" y1="8.948" y2="58.01"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#387eb8" />
+                                        <stop offset="1" stop-color="#366994" />
+                                    </linearGradient>
+                                    <linearGradient id="c" x1="40.028" x2="93.246" y1="40.453" y2="90.762"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#ffe052" />
+                                        <stop offset="1" stop-color="#ffc331" />
+                                    </linearGradient>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h100v100H0z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Python</span>
                         </div>
-                        <!-- Card 2 -->
+
                         <div
-                            class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300">
-                            <div
-                                class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                                <span class="material-symbols-outlined text-[28px]">shield_lock</span>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <h3 class="text-white text-xl font-bold">Auth &amp; Security</h3>
-                                <p class="text-slate-400 text-sm leading-relaxed">
-                                    Implementing OAuth2/OIDC flows and securing sensitive data with industry standards.
-                                    Expertise in JWT handling and session management.
-                                </p>
-                            </div>
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <path fill="#2ba977"
+                                    d="M46.206 0h16.342v74.898c-8.37 1.583-14.533 2.206-21.2 2.206C21.39 77.084 11 68.167 11 51.042c0-16.5 11.02-27.209 28.098-27.209 2.65 0 4.669.209 7.108.834zm.573 38.164c-1.914-.625-3.491-.833-5.51-.833-8.265 0-13.04 5.041-13.04 13.877 0 8.602 4.565 13.352 12.935 13.352 1.808 0 3.28-.102 5.615-.415z" />
+                                <path fill="#2ba977"
+                                    d="M89.27 25.844v37.5c0 12.915-.967 19.125-3.806 24.48-2.65 5.147-6.141 8.393-13.355 11.979l-15.163-7.146c7.213-3.352 10.704-6.315 12.934-10.835 2.334-4.623 3.07-9.978 3.07-24.061V25.844zM71.304 0h16.342v16.604H71.303z" />
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Django</span>
                         </div>
-                        <!-- Card 3 -->
                         <div
-                            class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300">
-                            <div
-                                class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                                <span class="material-symbols-outlined text-[28px]">cloud_queue</span>
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <h3 class="text-white text-xl font-bold">Cloud Infrastructure</h3>
-                                <p class="text-slate-400 text-sm leading-relaxed">
-                                    Deploying scalable microservices on AWS/Kubernetes with automated CI/CD pipelines
-                                    via Terraform and GitHub Actions.
-                                </p>
-                            </div>
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <img src="assets/images/frappe-favicon.svg" alt="frappe_framework"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Frappe</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <path fill="#e44d26" d="M14.021 90.034 6 0h88.187l-8.022 89.985L50.02 100" />
+                                <path fill="#f16529" d="M50.093 92.344V7.39h36.048l-6.88 76.811" />
+                                <path fill="#ebebeb"
+                                    d="M22.383 18.4h27.71v11.036H34.488L35.51 40.74h14.584v11.01H25.397zm3.5 38.893h11.084l.778 8.823 12.348 3.306v11.521l-22.654-6.32" />
+                                <path fill="#fff"
+                                    d="M77.706 18.4H50.044v11.036h26.64zm-2.018 22.34H50.044v11.035h13.612l-1.288 14.341-12.324 3.306v11.473l22.606-6.271" />
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">HTML</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <path fill="#264de4" d="m94.175 0-8.033 89.99L50.034 100l-36.01-9.996L6 0z" />
+                                <path fill="#2965f1" d="m79.265 84.26 6.864-76.9H50.087v84.988z" />
+                                <path fill="#ebebeb"
+                                    d="m24.396 40.74.99 11.039h24.702V40.74zm25.692-22.342h-27.68l1.003 11.038h26.676zm-.001 62.495V69.408l-.048.013-12.294-3.32-.786-8.803H25.878l1.547 17.332 22.612 6.277z" />
+                                <path fill="#fff"
+                                    d="m63.642 51.779-1.281 14.316-12.312 3.323v11.484l22.63-6.272.166-1.865 2.594-29.06.27-2.965L77.7 18.398H50.05v11.038h15.555L64.599 40.74H50.05v11.04z" />
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">CSS</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <g clip-path="url(#a)">
+                                    <path fill="#f7df1e" d="M100 0H0v100h100z" />
+                                    <path fill="#000"
+                                        d="M67.175 78.125c2.014 3.29 4.635 5.707 9.27 5.707 3.893 0 6.38-1.946 6.38-4.635 0-3.222-2.555-4.364-6.84-6.238l-2.35-1.008c-6.781-2.89-11.286-6.508-11.286-14.159 0-7.047 5.37-12.413 13.762-12.413 5.975 0 10.27 2.08 13.365 7.524l-7.317 4.699c-1.611-2.89-3.35-4.027-6.048-4.027-2.752 0-4.497 1.746-4.497 4.027 0 2.819 1.746 3.96 5.778 5.706l2.35 1.006c7.983 3.424 12.491 6.915 12.491 14.762 0 8.46-6.646 13.096-15.571 13.096-8.727 0-14.365-4.16-17.124-9.61zm-33.196.815c1.477 2.619 2.82 4.833 6.048 4.833 3.087 0 5.035-1.208 5.035-5.905V45.916h9.397v32.08c0 9.73-5.705 14.158-14.032 14.158-7.524 0-11.881-3.894-14.097-8.583z" />
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h100v100H0z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">JavaScript</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <g clip-path="url(#a)">
+                                    <path fill="#06b6d4"
+                                        d="M50 20q-20 0-25 19.994 7.5-9.997 17.5-7.498c3.804.95 6.522 3.71 9.532 6.764 4.902 4.974 10.576 10.731 22.969 10.731q20 0 24.999-19.995-7.5 9.997-17.5 7.5c-3.803-.951-6.521-3.71-9.531-6.765C68.067 25.758 62.392 20 50 20M25 49.991q-20 0-25 19.995 7.5-9.998 17.5-7.498c3.803.952 6.522 3.71 9.532 6.763C31.933 74.225 37.608 79.984 50 79.984q20 0 25-19.995-7.5 9.997-17.5 7.498c-3.803-.95-6.522-3.71-9.532-6.763C43.066 55.75 37.393 49.991 25 49.991" />
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h100v100H0z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Tailwind CSS</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <path fill="#41b883" d="M80 7h20L50 93.25 0 7h38.25L50 27 61.5 7z" />
+                                <path fill="#41b883" d="m0 7 50 86.25L100 7H80L50 58.75 19.75 7z" />
+                                <path fill="#35495e" d="M19.75 7 50 59 80 7H61.5L50 27 38.25 7z" />
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Vue JS</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0 0 48 48" class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <path fill="#283593" fill-rule="evenodd"
+                                    d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z"
+                                    clip-rule="evenodd"></path>
+                                <path fill="#5c6bc0" fill-rule="evenodd"
+                                    d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z"
+                                    clip-rule="evenodd"></path>
+                                <path fill="#fff" fill-rule="evenodd"
+                                    d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z"
+                                    clip-rule="evenodd"></path>
+                                <path fill="#3949ab" fill-rule="evenodd"
+                                    d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">C</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <path fill="#5c8dbc"
+                                    d="M94.73 29.32c0-1.676-.359-3.158-1.084-4.43-.713-1.25-1.78-2.298-3.21-3.127C78.621 14.95 66.797 8.16 54.987 1.343c-3.183-1.839-6.27-1.772-9.43.093-4.702 2.773-28.243 16.26-35.258 20.323-2.889 1.672-4.295 4.232-4.295 7.559C6 43.016 6.005 56.714 6 70.412c0 1.64.344 3.093 1.037 4.346.713 1.289 1.795 2.366 3.26 3.213 7.014 4.063 30.559 17.55 35.26 20.323 3.16 1.865 6.248 1.932 9.432.093 11.81-6.818 23.635-13.609 35.45-20.42 1.464-.847 2.546-1.925 3.259-3.212.692-1.253 1.036-2.706 1.037-4.346 0 0 0-27.39-.005-41.088" />
+                                <path fill="#1a4674"
+                                    d="M50.503 49.732 7.037 74.758c.713 1.289 1.795 2.366 3.26 3.213 7.014 4.063 30.559 17.55 35.26 20.323 3.16 1.866 6.248 1.932 9.432.094 11.81-6.82 23.635-13.61 35.45-20.42 1.464-.848 2.546-1.926 3.259-3.213z" />
+                                <path fill="#1a4674"
+                                    d="M37.629 57.145c2.53 4.415 7.284 7.393 12.738 7.393 5.488 0 10.27-3.016 12.786-7.478l-12.65-7.328z" />
+                                <path fill="#1b598e"
+                                    d="M94.73 29.321c0-1.677-.359-3.159-1.084-4.43L50.503 49.73l43.195 25.024c.692-1.252 1.036-2.706 1.037-4.346 0 0 0-27.39-.005-41.088" />
+                                <path fill="#fff"
+                                    d="M92.355 51.52H88.98v3.376h-3.376V51.52h-3.375v-3.375h3.375V44.77h3.376v3.375h3.375zm-12.316 0h-3.375v3.376h-3.376V51.52h-3.375v-3.375h3.375V44.77h3.376v3.375h3.375z" />
+                                <path fill="#fff"
+                                    d="M63.154 57.06c-2.517 4.463-7.299 7.479-12.787 7.479-5.454 0-10.209-2.979-12.738-7.394a14.6 14.6 0 0 1-1.935-7.28c0-8.104 6.57-14.673 14.673-14.673 5.42 0 10.15 2.941 12.691 7.311l12.826-7.385c-5.098-8.8-14.615-14.72-25.516-14.72-16.275 0-29.468 13.193-29.468 29.467 0 5.34 1.42 10.346 3.903 14.665 5.084 8.846 14.63 14.803 25.565 14.803 10.955 0 20.514-5.981 25.592-14.853z" />
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">C++</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <g fill="#00546b" clip-path="url(#a)">
+                                    <path
+                                        d="M92.11 77.066c-5.44-.137-9.657.415-13.194 1.934-1.02.413-2.653.414-2.789 1.726.544.552.612 1.45 1.089 2.209.817 1.38 2.244 3.245 3.536 4.212 1.428 1.104 2.857 2.208 4.353 3.175 2.652 1.657 5.645 2.623 8.23 4.28 1.497.966 2.992 2.21 4.488 3.245.749.552 1.224 1.45 2.177 1.795v-.207c-.477-.622-.613-1.519-1.088-2.21-.68-.69-1.36-1.311-2.04-2.002-1.973-2.692-4.421-5.04-7.074-6.972-2.176-1.52-6.938-3.59-7.821-6.145 0 0-.069-.068-.136-.137 1.496-.138 3.264-.69 4.693-1.105 2.312-.622 4.42-.484 6.8-1.105 1.089-.276 2.177-.621 3.265-.967v-.62c-1.224-1.243-2.108-2.9-3.4-4.074-3.469-3.038-7.278-6.007-11.222-8.492-2.11-1.38-4.83-2.278-7.074-3.452-.816-.414-2.176-.621-2.652-1.312-1.225-1.518-1.905-3.52-2.789-5.315-1.972-3.798-3.877-8.009-5.577-12.013-1.224-2.692-1.972-5.385-3.469-7.87-7.005-11.737-14.622-18.848-26.32-25.82-2.517-1.45-5.51-2.072-8.706-2.83-1.7-.07-3.4-.208-5.1-.278-1.09-.483-2.178-1.794-3.13-2.416C13.284 1.815 3.286-3.57.43 3.541c-1.837 4.487 2.72 8.906 4.284 11.184 1.157 1.588 2.652 3.383 3.469 5.178.476 1.173.611 2.417 1.088 3.66 1.088 3.036 2.108 6.42 3.537 9.25.748 1.45 1.564 2.969 2.516 4.28.544.76 1.496 1.105 1.7 2.348-.951 1.38-1.02 3.452-1.564 5.178-2.449 7.801-1.496 17.466 1.972 23.196 1.088 1.726 3.673 5.524 7.142 4.074 3.06-1.243 2.38-5.178 3.264-8.63.205-.83.069-1.38.476-1.933v.138c.953 1.933 1.904 3.797 2.789 5.73 2.108 3.383 5.78 6.904 8.841 9.252 1.633 1.242 2.925 3.382 4.966 4.142v-.208h-.137c-.408-.621-1.02-.897-1.564-1.38-1.224-1.243-2.585-2.762-3.536-4.143-2.857-3.866-5.374-8.146-7.618-12.565-1.088-2.14-2.04-4.487-2.924-6.627-.409-.83-.409-2.072-1.089-2.485-1.02 1.518-2.516 2.83-3.264 4.694-1.292 2.968-1.428 6.627-1.904 10.424-.273.07-.137 0-.273.14-2.176-.554-2.924-2.832-3.74-4.765-2.041-4.901-2.381-12.772-.613-18.433.477-1.45 2.517-6.006 1.701-7.387-.408-1.312-1.769-2.071-2.517-3.107-.884-1.312-1.836-2.968-2.448-4.418-1.633-3.866-2.449-8.147-4.217-12.013-.816-1.795-2.244-3.659-3.4-5.316-1.293-1.864-2.721-3.176-3.741-5.385-.34-.759-.817-2.002-.272-2.83.136-.553.407-.76.952-.898.884-.76 3.4.207 4.284.621 2.517 1.035 4.625 2.003 6.734 3.452.952.69 1.972 2.003 3.196 2.348h1.429c2.176.483 4.624.138 6.665.759 3.605 1.173 6.87 2.9 9.794 4.764 8.91 5.73 16.255 13.876 21.22 23.61.816 1.588 1.156 3.039 1.904 4.695 1.429 3.383 3.197 6.835 4.625 10.149 1.428 3.244 2.788 6.559 4.829 9.251 1.02 1.45 5.1 2.21 6.937 2.969 1.36.62 3.47 1.174 4.693 1.933 2.312 1.449 4.625 3.107 6.801 4.694 1.089.829 4.489 2.555 4.693 3.935" />
+                                    <path
+                                        d="M22.737 17.072c-1.156 0-1.972.139-2.788.345v.138h.136c.544 1.105 1.496 1.865 2.176 2.831.544 1.104 1.02 2.21 1.565 3.314.067-.07.135-.138.135-.138.953-.69 1.429-1.795 1.429-3.452-.409-.483-.477-.966-.817-1.45-.407-.69-1.292-1.035-1.836-1.588" />
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h100v100H0z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">MySQL</span>
+                        </div>
+                        <!-- Tools -->
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <g fill="#2496ed" clip-path="url(#a)">
+                                    <path
+                                        d="M99.014 41.088c-.271-.215-2.803-2.127-8.142-2.127-1.41.006-2.817.127-4.207.362-1.034-7.083-6.89-10.537-7.153-10.692l-1.433-.827-.943 1.361a19.2 19.2 0 0 0-2.55 5.96c-.955 4.043-.374 7.84 1.68 11.087-2.48 1.382-6.459 1.723-7.264 1.753H3.131a3.13 3.13 0 0 0-3.127 3.113A47.4 47.4 0 0 0 2.89 68.004c2.27 5.951 5.645 10.334 10.037 13.017 4.922 3.014 12.918 4.736 21.982 4.736a65.6 65.6 0 0 0 12.207-1.106 51 51 0 0 0 15.932-5.787 43.8 43.8 0 0 0 10.872-8.9c5.22-5.908 8.328-12.488 10.64-18.335h.922c5.714 0 9.227-2.286 11.165-4.203a12.2 12.2 0 0 0 2.945-4.361l.409-1.197z" />
+                                    <path
+                                        d="M9.236 46.036h8.827a.77.77 0 0 0 .771-.771v-7.863a.77.77 0 0 0-.766-.775H9.236a.77.77 0 0 0-.77.771v7.867c0 .426.345.77.77.77m12.164.001h8.828a.77.77 0 0 0 .77-.771v-7.863a.77.77 0 0 0-.766-.775H21.4a.775.775 0 0 0-.775.775v7.863c.003.426.349.77.775.77m12.35.001h8.827a.77.77 0 0 0 .77-.771v-7.863a.77.77 0 0 0-.766-.775h-8.832a.77.77 0 0 0-.77.771v7.867c0 .426.345.77.77.77m12.204.001h8.827a.775.775 0 0 0 .775-.771v-7.863a.775.775 0 0 0-.775-.775h-8.827a.77.77 0 0 0-.771.771v7.867c0 .426.345.77.77.77M21.4 34.724h8.828a.775.775 0 0 0 .77-.775v-7.862a.77.77 0 0 0-.77-.771H21.4a.775.775 0 0 0-.776.77v7.863a.78.78 0 0 0 .776.775m12.35 0h8.827a.775.775 0 0 0 .77-.775v-7.862a.77.77 0 0 0-.77-.771H33.75a.77.77 0 0 0-.771.77v7.863c0 .426.344.773.77.775m12.204 0h8.827a.78.78 0 0 0 .775-.775v-7.862a.775.775 0 0 0-.775-.771h-8.827a.77.77 0 0 0-.771.77v7.863c0 .426.344.773.77.775m.001-11.316h8.827a.775.775 0 0 0 .775-.77V14.77a.775.775 0 0 0-.775-.77h-8.827a.77.77 0 0 0-.771.77v7.868c0 .425.345.77.77.77m12.311 22.628h8.827a.775.775 0 0 0 .775-.771v-7.863a.775.775 0 0 0-.775-.775h-8.827a.77.77 0 0 0-.77.771v7.867c0 .426.345.77.77.77" />
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h100v100H0z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Docker</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <img src="assets/images/linux.svg"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all" />
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Linux</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <g clip-path="url(#a)">
+                                    <path fill="#de4c36"
+                                        d="M98.114 45.544 54.454 1.886a6.44 6.44 0 0 0-9.108 0l-9.066 9.066 11.5 11.501a7.65 7.65 0 0 1 7.869 1.834 7.66 7.66 0 0 1 1.817 7.916L68.55 43.287c2.682-.923 5.776-.326 7.918 1.82a7.66 7.66 0 0 1 0 10.836 7.662 7.662 0 0 1-12.508-8.335L53.623 37.271v27.202a7.663 7.663 0 0 1 2.026 12.288 7.66 7.66 0 0 1-10.836 0 7.663 7.663 0 0 1 2.508-12.51V36.795a7.6 7.6 0 0 1-2.508-1.672 7.66 7.66 0 0 1-1.651-8.377l-11.338-11.34L1.887 45.344a6.44 6.44 0 0 0 0 9.11l43.661 43.659a6.44 6.44 0 0 0 9.108 0l43.458-43.457a6.444 6.444 0 0 0 0-9.11" />
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h100v100H0z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Git</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all">
+                                <g clip-path="url(#a)">
+                                    <path fill="#0acf83"
+                                        d="M33.333 100C42.533 100 50 92.533 50 83.333V66.667H33.333c-9.2 0-16.666 7.466-16.666 16.666S24.133 100 33.333 100" />
+                                    <path fill="#a259ff"
+                                        d="M16.667 50c0-9.2 7.466-16.667 16.666-16.667H50v33.334H33.333c-9.2 0-16.666-7.467-16.666-16.667" />
+                                    <path fill="#f24e1e"
+                                        d="M16.667 16.667C16.667 7.467 24.133 0 33.333 0H50v33.333H33.333c-9.2 0-16.666-7.466-16.666-16.666" />
+                                    <path fill="#ff7262"
+                                        d="M50 0h16.667c9.2 0 16.666 7.467 16.666 16.667s-7.466 16.666-16.666 16.666H50z" />
+                                    <path fill="#1abcfe"
+                                        d="M83.333 50c0 9.2-7.466 16.667-16.666 16.667S50 59.2 50 50s7.467-16.667 16.667-16.667S83.333 40.8 83.333 50" />
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h100v100H0z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Figma</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <img src="assets/images/postman.svg"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all" />
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Postman</span>
+                        </div>
+                        <div
+                            class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
+                            <img src="assets/images/rest-api.svg"
+                                class="h-8 w-8 grayscale group-hover:grayscale-0 transition-all" />
+                            <span class="text-slate-400 text-sm font-medium group-hover:text-white">Rest API</span>
+                        </div>
+                    </div>
+                    <div
+                        class="p-4 rounded-lg bg-background-dark border border-border-dark font-mono text-xs text-slate-500">
+                        <p class="mb-2 text-slate-300">// Currently exploring:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 rounded bg-charcoal-light text-primary">CI/CD</span>
+                            <span class="px-2 py-1 rounded bg-charcoal-light text-primary">K8s</span>
+                            <span class="px-2 py-1 rounded bg-charcoal-light text-primary">Node.js</span>
                         </div>
                     </div>
                 </section>
-                <!-- Featured Project -->
+                <!-- Projects -->
                 <section class="scroll-mt-24" id="projects">
                     <div class="flex items-center gap-4 mb-8">
                         <span class="h-px w-8 bg-primary"></span>
-                        <h2 class="text-white text-2xl font-bold tracking-tight">Featured Case Study</h2>
+                        <h2 class="text-white text-2xl font-bold tracking-tight">Projects</h2>
                     </div>
-                    <div class="rounded-2xl border border-border-dark bg-charcoal-light overflow-hidden">
-                        <div class="grid lg:grid-cols-2">
-                            <div
-                                class="p-8 lg:p-12 flex flex-col justify-center gap-6 border-b lg:border-b-0 lg:border-r border-border-dark">
-                                <div>
-                                    <span
-                                        class="text-primary font-mono text-sm tracking-wider uppercase mb-2 block">Identity
-                                        Provider Service</span>
-                                    <h3 class="text-white text-3xl font-bold mb-4">Enterprise OAuth2 Auth Server</h3>
-                                    <p class="text-slate-400 leading-relaxed mb-6">
-                                        A centralized authentication service built to handle 10k+ concurrent logins with
-                                        sub-50ms latency. Implements standard OIDC flows including Authorization Code
-                                        with PKCE.
-                                    </p>
-                                </div>
-                                <div class="space-y-3">
-                                    <div class="flex items-start gap-3">
-                                        <span
-                                            class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        <span class="text-slate-300 text-sm">Reduced authentication latency by 40% using
-                                            Redis caching layers.</span>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <span
-                                            class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        <span class="text-slate-300 text-sm">Horizontal scaling capabilities using
-                                            Kubernetes auto-scaling groups.</span>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <span
-                                            class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                        <span class="text-slate-300 text-sm">Full audit logging to ELK stack for
-                                            compliance tracking.</span>
-                                    </div>
-                                </div>
-                                <div class="flex flex-wrap gap-2 mt-2">
-                                    <span
-                                        class="px-3 py-1 rounded-md bg-background-dark border border-border-dark text-xs text-slate-400 font-mono">Go</span>
-                                    <span
-                                        class="px-3 py-1 rounded-md bg-background-dark border border-border-dark text-xs text-slate-400 font-mono">Redis</span>
-                                    <span
-                                        class="px-3 py-1 rounded-md bg-background-dark border border-border-dark text-xs text-slate-400 font-mono">PostgreSQL</span>
-                                    <span
-                                        class="px-3 py-1 rounded-md bg-background-dark border border-border-dark text-xs text-slate-400 font-mono">Docker</span>
-                                </div>
-                                <div class="pt-4">
-                                    <a class="inline-flex items-center text-white font-bold hover:text-primary transition-colors gap-2"
-                                        href="#">
-                                        View Repository <span
-                                            class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Stylized System Architecture Visual -->
-                            <div
-                                class="relative bg-background-dark p-8 lg:p-12 flex items-center justify-center overflow-hidden">
-                                <!-- Background grid pattern -->
-                                <div class="absolute inset-0 opacity-10"
-                                    style="background-image: radial-gradient(#3b4354 1px, transparent 1px); background-size: 20px 20px;">
-                                </div>
-                                <div class="relative z-10 w-full max-w-sm">
-                                    <!-- Diagram -->
-                                    <div class="flex flex-col gap-6 items-center">
-                                        <div class="w-full flex justify-center">
-                                            <div
-                                                class="bg-charcoal-light border border-border-dark rounded-lg p-3 w-32 text-center shadow-lg">
-                                                <span class="text-xs text-slate-400 font-mono block mb-1">Client</span>
-                                                <div class="h-1 w-full bg-slate-700 rounded overflow-hidden">
-                                                    <div class="h-full bg-slate-500 w-2/3"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="h-8 w-px border-l border-dashed border-slate-600"></div>
-                                        <div class="w-full flex justify-center relative">
-                                            <div class="absolute inset-0 bg-primary/20 blur-xl rounded-full"></div>
-                                            <div
-                                                class="bg-charcoal-light border border-primary rounded-lg p-4 w-48 text-center shadow-lg relative z-10">
-                                                <div class="flex justify-between items-center mb-2">
-                                                    <span class="text-xs text-primary font-bold font-mono">API
-                                                        Gateway</span>
-                                                    <span class="h-2 w-2 rounded-full bg-green-500"></span>
-                                                </div>
-                                                <div class="grid grid-cols-4 gap-1">
-                                                    <div class="h-1 bg-primary rounded"></div>
-                                                    <div class="h-1 bg-primary rounded"></div>
-                                                    <div class="h-1 bg-primary/50 rounded"></div>
-                                                    <div class="h-1 bg-primary/30 rounded"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="h-8 w-px border-l border-dashed border-slate-600"></div>
-                                        <div class="w-full flex justify-center gap-4">
-                                            <div
-                                                class="bg-charcoal-light border border-border-dark rounded-lg p-3 w-24 text-center shadow-lg flex flex-col items-center">
-                                                <span
-                                                    class="material-symbols-outlined text-slate-500 text-[20px] mb-1">database</span>
-                                                <span class="text-[10px] text-slate-400 font-mono">Primary DB</span>
-                                            </div>
-                                            <div
-                                                class="bg-charcoal-light border border-border-dark rounded-lg p-3 w-24 text-center shadow-lg flex flex-col items-center">
-                                                <span
-                                                    class="material-symbols-outlined text-slate-500 text-[20px] mb-1">bolt</span>
-                                                <span class="text-[10px] text-slate-400 font-mono">Redis Cache</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="repos">
                     </div>
                 </section>
-                <div class="grid lg:grid-cols-2 gap-12 w-full">
-                    <!-- Engineering Notes -->
-                    <section class="flex flex-col gap-6" id="notes">
-                        <div class="flex items-center gap-4 mb-2">
-                            <span class="h-px w-8 bg-primary"></span>
-                            <h2 class="text-white text-2xl font-bold tracking-tight">Engineering Notes</h2>
-                        </div>
-                        <div class="flex flex-col gap-0 border-l border-border-dark ml-4">
-                            <!-- Note 1 -->
-                            <a class="group relative pl-8 py-4 flex flex-col gap-1 hover:bg-charcoal-light/30 transition-colors rounded-r-lg"
-                                href="#">
-                                <div
-                                    class="absolute -left-[5px] top-6 h-2.5 w-2.5 rounded-full border-2 border-background-dark bg-slate-600 group-hover:bg-primary transition-colors">
-                                </div>
-                                <span class="text-xs font-mono text-slate-500">Oct 24, 2023</span>
-                                <h3 class="text-slate-200 font-bold group-hover:text-primary transition-colors">
-                                    Optimizing Postgres for Write-Heavy Workloads</h3>
-                                <p class="text-sm text-slate-500 line-clamp-2">Exploring WAL configuration, autovacuum
-                                    tuning, and index strategies for high-throughput logging systems.</p>
-                            </a>
-                            <!-- Note 2 -->
-                            <a class="group relative pl-8 py-4 flex flex-col gap-1 hover:bg-charcoal-light/30 transition-colors rounded-r-lg"
-                                href="#">
-                                <div
-                                    class="absolute -left-[5px] top-6 h-2.5 w-2.5 rounded-full border-2 border-background-dark bg-slate-600 group-hover:bg-primary transition-colors">
-                                </div>
-                                <span class="text-xs font-mono text-slate-500">Sep 12, 2023</span>
-                                <h3 class="text-slate-200 font-bold group-hover:text-primary transition-colors">
-                                    Idempotency in Distributed Payments</h3>
-                                <p class="text-sm text-slate-500 line-clamp-2">How we ensure exactly-once processing in
-                                    our microservices architecture using idempotency keys and atomic transactions.</p>
-                            </a>
-                            <!-- Note 3 -->
-                            <a class="group relative pl-8 py-4 flex flex-col gap-1 hover:bg-charcoal-light/30 transition-colors rounded-r-lg"
-                                href="#">
-                                <div
-                                    class="absolute -left-[5px] top-6 h-2.5 w-2.5 rounded-full border-2 border-background-dark bg-slate-600 group-hover:bg-primary transition-colors">
-                                </div>
-                                <span class="text-xs font-mono text-slate-500">Aug 05, 2023</span>
-                                <h3 class="text-slate-200 font-bold group-hover:text-primary transition-colors">gRPC vs
-                                    REST: When to Switch?</h3>
-                                <p class="text-sm text-slate-500 line-clamp-2">A look at the trade-offs between JSON
-                                    over HTTP and Protocol Buffers over gRPC for internal service communication.</p>
-                            </a>
-                        </div>
-                        <a class="text-sm text-primary font-bold hover:underline ml-12 mt-2" href="#">View all notes
-                            -&gt;</a>
-                    </section>
-                    <!-- Tech Stack -->
-                    <section class="flex flex-col gap-6" id="stack">
-                        <div class="flex items-center gap-4 mb-2">
-                            <span class="h-px w-8 bg-primary"></span>
-                            <h2 class="text-white text-2xl font-bold tracking-tight">Tech Stack</h2>
-                        </div>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            <div
-                                class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
-                                <span class="text-3xl grayscale group-hover:grayscale-0 transition-all">🐹</span>
-                                <span class="text-slate-400 text-sm font-medium group-hover:text-white">Go</span>
-                            </div>
-                            <div
-                                class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
-                                <span class="text-3xl grayscale group-hover:grayscale-0 transition-all">🦀</span>
-                                <span class="text-slate-400 text-sm font-medium group-hover:text-white">Rust</span>
-                            </div>
-                            <div
-                                class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
-                                <span class="text-3xl grayscale group-hover:grayscale-0 transition-all">🐍</span>
-                                <span class="text-slate-400 text-sm font-medium group-hover:text-white">Python</span>
-                            </div>
-                            <div
-                                class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
-                                <span class="text-3xl grayscale group-hover:grayscale-0 transition-all">🐳</span>
-                                <span class="text-slate-400 text-sm font-medium group-hover:text-white">Docker</span>
-                            </div>
-                            <div
-                                class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
-                                <span class="text-3xl grayscale group-hover:grayscale-0 transition-all">☸️</span>
-                                <span class="text-slate-400 text-sm font-medium group-hover:text-white">K8s</span>
-                            </div>
-                            <div
-                                class="bg-charcoal-light border border-border-dark hover:border-primary/50 hover:bg-charcoal-light/80 p-4 rounded-lg flex flex-col items-center justify-center gap-2 group transition-all cursor-default">
-                                <span class="text-3xl grayscale group-hover:grayscale-0 transition-all">🐘</span>
-                                <span class="text-slate-400 text-sm font-medium group-hover:text-white">Postgres</span>
-                            </div>
-                        </div>
-                        <div
-                            class="p-4 rounded-lg bg-background-dark border border-border-dark font-mono text-xs text-slate-500">
-                            <p class="mb-2 text-slate-300">// Currently exploring:</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-charcoal-light text-primary">WebAssembly</span>
-                                <span class="px-2 py-1 rounded bg-charcoal-light text-primary">eBPF</span>
-                                <span class="px-2 py-1 rounded bg-charcoal-light text-primary">Temporal.io</span>
-                            </div>
-                        </div>
-                    </section>
-                </div>
             </div>
         </main>
         <footer class="border-t border-border-dark bg-background-dark py-12">
@@ -408,10 +435,10 @@
                 class="w-full max-w-[1200px] px-6 lg:px-40 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-2 text-slate-500">
                     <span class="material-symbols-outlined text-[20px]">terminal</span>
-                    <span class="text-sm">© 2024 Backend Portfolio. MIT License.</span>
+                    <span class="text-sm">© 2026 Sanjmyatav.</span>
                 </div>
                 <div class="flex gap-6">
-                    <a class="text-slate-400 hover:text-primary transition-colors" href="#">
+                    <a class="text-slate-400 hover:text-primary transition-colors" href="https://github.com/sanjaa46">
                         <span class="sr-only">GitHub</span>
                         <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
                             <path clip-rule="evenodd"
@@ -420,25 +447,51 @@
                         </svg>
                     </a>
                     <a class="text-slate-400 hover:text-primary transition-colors" href="#">
-                        <span class="sr-only">LinkedIn</span>
-                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
-                            <path clip-rule="evenodd"
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                                fill-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                    <a class="text-slate-400 hover:text-primary transition-colors" href="#">
-                        <span class="sr-only">Twitter</span>
-                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+                        <span class="sr-only">Instagram</span>
+                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
-                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
-                            </path>
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                         </svg>
                     </a>
                 </div>
             </div>
         </footer>
     </div>
+
+    <script>
+        const username = "Sanjaa46"
+        const repos = ["library_management", "DjangoAuthServer", "PosMachine", "mp3-Downloader-from-Playlist"]
+
+        for (const repo of repos) {
+
+            fetch(`https://api.github.com/repos/${username}/${repo}`).then(res => res.json()).then(data => {
+                const conatiner = document.getElementById("repos");
+                const repoCard = document.createElement("div");
+                repoCard.className = "group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300 cursor-pointer";
+                repoCard.innerHTML = `
+                    <div class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-[28px]">code</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-white text-xl font-bold">${data.name}</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            ${data.description}
+                        </p>
+                    </div>
+                `;
+                repoCard.addEventListener("click", () => {
+                    window.open(data.html_url, "_blank");
+                });
+                conatiner.appendChild(repoCard);
+            }).catch(err => {
+                console.error("Error fetching GitHub repo:", err);
+            });
+
+        }
+        function viewGithub() {
+            window.open("https://github.com/sanjaa46", "_blank");
+        }
+    </script>
 </body>
 
 </html>
