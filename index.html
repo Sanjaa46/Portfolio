@@ -14,29 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0d59f2",
-                        "background-light": "#f5f6f8",
-                        "background-dark": "#101622",
-                        "charcoal": "#111318",
-                        "charcoal-light": "#1b1f27",
-                        "border-dark": "#282e39"
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "Noto Sans", "sans-serif"],
-                        "mono": ["Space Grotesk", "monospace"] // Using Space Grotesk for mono-feel due to its geometric nature
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
+    <link href="./assets/output.css" rel="stylesheet">
     <style>
         /* Custom scrollbar for that terminal feel */
         ::-webkit-scrollbar {
@@ -93,7 +71,7 @@
             </div>
         </header>
         <main class="flex-1 flex flex-col items-center">
-            <div class="w-full max-w-[1200px] px-6 lg:px-40 py-12 flex flex-col gap-20">
+            <div class="w-full max-w-300 px-6 lg:px-40 py-12 flex flex-col gap-20">
                 <!-- Hero Section -->
                 <section class="relative flex flex-col justify-center min-h-[60vh] gap-8">
                     <!-- Decorative background element -->

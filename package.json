@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./assets/input.css -o ./assets/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanjaa46/Portfolio.git"
+  },
+  "author": "Sanjaa46",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanjaa46/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Sanjaa46/Portfolio#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}
