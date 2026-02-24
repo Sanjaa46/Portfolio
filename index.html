@@ -404,13 +404,65 @@
                         <h2 class="text-white text-2xl font-bold tracking-tight">Projects</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="repos">
+                        <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300 cursor-pointer">
+                            <a href="https://github.com/Sanjaa46/DjangoAuthServer" target="_blank">
+                                <div class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[28px]">code</span>
+                                </div>
+                                <div class="flex flex-col gap-2 mt-3">
+                                    <h3 class="text-white text-xl font-bold">Django Auth Server</h3>
+                                    <p class="text-slate-400 text-sm leading-relaxed">
+                                        Simple OAuth architecture Auth Server
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300 cursor-pointer">
+                            <a href="https://github.com/Sanjaa46/library_management" target="_blank">
+                                <div class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[28px]">code</span>
+                                </div>
+                                <div class="flex flex-col gap-2 mt-3">
+                                    <h3 class="text-white text-xl font-bold">Library Management System</h3>
+                                    <p class="text-slate-400 text-sm leading-relaxed">
+                                        Энэхүү систем нь энгийн номын сангийн удирдлагын систем бөгөөд номын санч болон уншигчдад (Library Member) зориулсан.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300 cursor-pointer">
+                            <a href="https://github.com/Sanjaa46/PosMachine" target="_blank">
+                                <div class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[28px]">code</span>
+                                </div>
+                                <div class="flex flex-col gap-2 mt-3">
+                                    <h3 class="text-white text-xl font-bold">POS Machine</h3>
+                                    <p class="text-slate-400 text-sm leading-relaxed">
+                                        Simple POS system for small business.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300 cursor-pointer">
+                            <a href="https://github.com/Sanjaa46/mp3-Downloader-from-Playlist" target="_blank">
+                                <div class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[28px]">code</span>
+                                </div>
+                                <div class="flex flex-col gap-2 mt-3">
+                                    <h3 class="text-white text-xl font-bold">MP3 Downloader from Playlist</h3>
+                                    <p class="text-slate-400 text-sm leading-relaxed">
+                                        Download all mp3 files from youtube public playlist.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </section>
             </div>
         </main>
         <footer class="border-t border-border-dark bg-background-dark py-12">
             <div
-                class="w-full max-w-[1200px] px-6 lg:px-40 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                class="w-full max-w-300 px-6 lg:px-40 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-2 text-slate-500">
                     <span class="material-symbols-outlined text-[20px]">terminal</span>
                     <span class="text-sm">© 2026 Sanjmyatav.</span>
@@ -437,35 +489,6 @@
     </div>
 
     <script>
-        const username = "Sanjaa46"
-        const repos = ["library_management", "DjangoAuthServer", "PosMachine", "mp3-Downloader-from-Playlist"]
-
-        for (const repo of repos) {
-
-            fetch(`https://api.github.com/repos/${username}/${repo}`).then(res => res.json()).then(data => {
-                const conatiner = document.getElementById("repos");
-                const repoCard = document.createElement("div");
-                repoCard.className = "group flex flex-col gap-4 rounded-xl border border-border-dark bg-charcoal-light p-6 hover:border-primary/50 transition-all duration-300 cursor-pointer";
-                repoCard.innerHTML = `
-                    <div class="size-12 rounded-lg bg-background-dark flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined text-[28px]">code</span>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <h3 class="text-white text-xl font-bold">${data.name}</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            ${data.description}
-                        </p>
-                    </div>
-                `;
-                repoCard.addEventListener("click", () => {
-                    window.open(data.html_url, "_blank");
-                });
-                conatiner.appendChild(repoCard);
-            }).catch(err => {
-                console.error("Error fetching GitHub repo:", err);
-            });
-
-        }
         function viewGithub() {
             window.open("https://github.com/sanjaa46", "_blank");
         }
