@@ -22,3 +22,134 @@
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
 }
+
+.gantt-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6c63ff, #00d4aa);
+}
+
+.center-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(to bottom, #6c63ff, #00d4aa, #1e1e2e);
+}
+
+.left-card::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  right: -12px;
+  width: 12px;
+  height: 2px;
+  background: #1e1e2e;
+}
+
+.right-card::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: -12px;
+  width: 12px;
+  height: 2px;
+  background: #1e1e2e;
+}
+
+@keyframes growBar {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gantt-bar {
+  transform-origin: left center;
+  animation: growBar 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.bar-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.bar-delay-2 {
+  animation-delay: 0.25s;
+}
+
+.bar-delay-3 {
+  animation-delay: 0.4s;
+}
+
+.tl-card {
+  animation: fadeUp 0.6s ease both;
+}
+
+.card-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.card-delay-2 {
+  animation-delay: 0.25s;
+}
+
+.card-delay-3 {
+  animation-delay: 0.4s;
+}
+
+.bar-edu {
+  background: linear-gradient(90deg, #1a6b4a, #00d4aa);
+  box-shadow: 0 0 12px rgba(0, 212, 170, 0.2);
+}
+
+.bar-intern {
+  background: linear-gradient(90deg, #6b3a1a, #ff8c42);
+  box-shadow: 0 0 12px rgba(255, 140, 66, 0.2);
+}
+
+.bar-work {
+  background: linear-gradient(90deg, #6c63ff, #8b80ff);
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.3);
+}
+
+.dot-work {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  box-shadow: 0 0 16px rgba(108, 99, 255, 0.4);
+}
+
+.dot-edu {
+  background: #00d4aa;
+  border-color: #00d4aa;
+  box-shadow: 0 0 16px rgba(0, 212, 170, 0.4);
+}
+
+.dot-intern {
+  background: #ff8c42;
+  border-color: #ff8c42;
+  box-shadow: 0 0 16px rgba(255, 140, 66, 0.4);
+}
