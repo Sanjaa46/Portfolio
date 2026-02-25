@@ -15,7 +15,6 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link href="./assets/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/gantt.css">
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <style>
         /* Custom scrollbar for that terminal feel */
@@ -481,112 +480,121 @@
                         </div>
                     </div>
                 </section>
-                <!--
-  EXPERIENCE SECTION — drop-in replacement for the <section id="experience"> block.
-  
-  Changes vs old version:
-  • Replaced invalid Tailwind classes (w-45, top-1.25, h-6.5, bg-bg, bg-white/2,
-    border-border, max-w-300, overflow-hidden on wrapper) with valid ones / CSS classes.
-  • gantt-track, gantt-label, gantt-bar are now fully defined in input.css.
-  • Wrapper overflow changed to visible so the ::before gradient line shows.
--->
 
-                <section class="flex flex-col gap-6" id="experience">
+                <section class="flex flex-col gap-6 scroll-mt-24" id="experience">
                     <div class="flex items-center gap-4 mb-2">
                         <span class="h-px w-8 bg-primary"></span>
                         <h2 class="text-white text-2xl font-bold tracking-tight" data-i18n="experience_nav">Experience
                         </h2>
                     </div>
 
-                    <div class="w-full">
-                        <div class="gantt-wrapper w-full border border-border-dark rounded-2xl p-8 mb-8"
-                            style="background: #101622;">
+                    <div class="w-full border border-border-dark rounded-xl p-8 mb-8 relative"
+                        style="background:#101622; overflow:visible;">
 
-                            <!-- ── Year axis ── -->
-                            <div class="flex mb-3" style="margin-left: 176px;">
-                                <div class="flex-1 text-[0.65rem] text-slate-600 border-l border-border-dark pl-1">2021
-                                </div>
-                                <div class="flex-1 text-[0.65rem] text-slate-600 border-l border-border-dark pl-1">2022
-                                </div>
-                                <div class="flex-1 text-[0.65rem] text-slate-600 border-l border-border-dark pl-1">2023
-                                </div>
-                                <div class="flex-1 text-[0.65rem] text-slate-600 border-l border-border-dark pl-1">2024
-                                </div>
-                                <div class="flex-1 text-[0.65rem] text-slate-600 border-l border-border-dark pl-1">2025
-                                </div>
-                                <div class="flex-1 text-[0.65rem] text-slate-600 border-l border-border-dark pl-1">2026
-                                    →</div>
-                            </div>
+                        <!-- Top gradient line -->
+                        <div class="absolute top-0 left-0 right-0 h-0.5 rounded-t-xl"
+                            style="background:linear-gradient(90deg,#6c63ff,#00d4aa);"></div>
 
-                            <!-- ── Education row ── -->
-                            <div class="flex items-center mb-4">
-                                <div class="gantt-label">
-                                    <div class="text-[0.75rem] font-semibold text-white leading-snug"
-                                        data-i18n="degree">B.Sc. Info Tech</div>
-                                    <div class="text-[0.65rem] text-slate-600 mt-0.5" data-i18n="university">National
-                                        Univ. of Mongolia</div>
-                                </div>
-                                <div class="gantt-track">
-                                    <!-- Sep 2021 → Jun 2025 : ~4yr of 5yr span = left≈0%, width≈73% -->
-                                    <div class="gantt-bar bar-edu bar-delay-1" style="left: 0%; width: 73%;">
-                                        Sep 2021 – Jun 2025
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ── Internship row ── -->
-                            <div class="flex items-center mb-4">
-                                <div class="gantt-label">
-                                    <div class="text-[0.75rem] font-semibold text-white leading-snug"
-                                        data-i18n="internship">IT Support Intern</div>
-                                    <div class="text-[0.65rem] text-slate-600 mt-0.5" data-i18n="intern_company">Erdenes
-                                        ITP LLC</div>
-                                </div>
-                                <div class="gantt-track">
-                                    <!-- Jun–Jul 2024: ~3.5yr in → left≈58%, width narrow, min-width enforced -->
-                                    <div class="gantt-bar bar-intern bar-delay-2"
-                                        style="left: 53%; width: 3%; min-width: 80px;">
-                                        Jun – Jul 2024
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ── Work row ── -->
-                            <div class="flex items-center mb-6">
-                                <div class="gantt-label">
-                                    <div class="text-[0.75rem] font-semibold text-white leading-snug" data-i18n="work">
-                                        Junior Backend Dev</div>
-                                    <div class="text-[0.65rem] text-slate-600 mt-0.5" data-i18n="work_company">Data Mine
-                                        Technology LLC</div>
-                                </div>
-                                <div class="gantt-track">
-                                    <!-- Sep 2025 → now: ~4.75yr in → left≈80%, extends to edge -->
-                                    <div class="gantt-bar bar-work bar-delay-3"
-                                        style="left: 80%; width: 20%; min-width: 100px;">
-                                        Sep 2025 – now
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ── Legend ── -->
-                            <div class="flex gap-6 justify-center">
-                                <div class="flex items-center gap-2 text-xs text-slate-600">
-                                    <div class="w-2.5 h-2.5 rounded-full" style="background: #00d4aa;"></div>
-                                    <p data-i18n="legend_education">Education</p>
-                                </div>
-                                <div class="flex items-center gap-2 text-xs text-slate-600">
-                                    <div class="w-2.5 h-2.5 rounded-full" style="background: #ff8c42;"></div>
-                                    <p data-i18n="legend_internship">Internship</p>
-                                </div>
-                                <div class="flex items-center gap-2 text-xs text-slate-600">
-                                    <div class="w-2.5 h-2.5 rounded-full" style="background: #8b80ff;"></div>
-                                    <p data-i18n="legend_work">Work</p>
-                                </div>
-                            </div>
-
+                        <!-- Year axis -->
+                        <div class="flex mb-4" style="margin-left:180px;">
+                            <div class="flex-1 text-slate-600 border-l border-border-dark pl-1"
+                                style="font-size:0.65rem;">2021</div>
+                            <div class="flex-1 text-slate-600 border-l border-border-dark pl-1"
+                                style="font-size:0.65rem;">2022</div>
+                            <div class="flex-1 text-slate-600 border-l border-border-dark pl-1"
+                                style="font-size:0.65rem;">2023</div>
+                            <div class="flex-1 text-slate-600 border-l border-border-dark pl-1"
+                                style="font-size:0.65rem;">2024</div>
+                            <div class="flex-1 text-slate-600 border-l border-border-dark pl-1"
+                                style="font-size:0.65rem;">2025</div>
+                            <div class="flex-1 text-slate-600 border-l border-border-dark pl-1"
+                                style="font-size:0.65rem;">2026 →</div>
                         </div>
+
+                        <!-- Education row -->
+                        <div class="flex items-center mb-4">
+                            <div class="shrink-0 pr-4" style="width:180px;">
+                                <div class="text-white font-semibold leading-snug" style="font-size:0.75rem;"
+                                    data-i18n="degree">B.Sc. Info Tech</div>
+                                <div class="text-slate-600 mt-0.5" style="font-size:0.65rem;" data-i18n="university">
+                                    National Univ. of Mongolia</div>
+                            </div>
+                            <div class="flex-1 relative rounded"
+                                style="height:36px; background:rgba(255,255,255,0.03); border-left:1px solid #282e39;">
+                                <div class="absolute flex items-center rounded-md text-white overflow-hidden"
+                                    style="top:5px; height:26px; left:0%; width:75%; min-width:120px; padding:0 10px; font-size:0.6rem; background:linear-gradient(90deg,#1a6b4a,#00d4aa); box-shadow:0 0 12px rgba(0,212,170,0.2); transform-origin:left center; animation:growBar 0.8s cubic-bezier(0.22,1,0.36,1) 0.1s both;">
+                                    Sep 2021 – Jun 2025
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Internship row -->
+                        <div class="flex items-center mb-4">
+                            <div class="shrink-0 pr-4" style="width:180px;">
+                                <div class="text-white font-semibold leading-snug" style="font-size:0.75rem;"
+                                    data-i18n="internship">IT Support Intern</div>
+                                <div class="text-slate-600 mt-0.5" style="font-size:0.65rem;"
+                                    data-i18n="intern_company">Erdenes ITP LLC</div>
+                            </div>
+                            <div class="flex-1 relative rounded"
+                                style="height:36px; background:rgba(255,255,255,0.03); border-left:1px solid #282e39;">
+                                <div class="absolute flex items-center rounded-md text-white overflow-hidden"
+                                    style="top:5px; height:26px; left:52%; width:3%; min-width:90px; padding:0 10px; font-size:0.6rem; background:linear-gradient(90deg,#6b3a1a,#ff8c42); box-shadow:0 0 12px rgba(255,140,66,0.2); transform-origin:left center; animation:growBar 0.8s cubic-bezier(0.22,1,0.36,1) 0.25s both;">
+                                    Jun – Jul 2024
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Work row -->
+                        <div class="flex items-center mb-6">
+                            <div class="shrink-0 pr-4" style="width:180px;">
+                                <div class="text-white font-semibold leading-snug" style="font-size:0.75rem;"
+                                    data-i18n="work">Junior Backend Dev</div>
+                                <div class="text-slate-600 mt-0.5" style="font-size:0.65rem;" data-i18n="work_company">
+                                    Data Mine Technology LLC</div>
+                            </div>
+                            <div class="flex-1 relative rounded"
+                                style="height:36px; background:rgba(255,255,255,0.03); border-left:1px solid #282e39;">
+                                <div class="absolute flex items-center rounded-md text-white overflow-hidden"
+                                    style="top:5px; height:26px; left:80%; width:20%; min-width:100px; padding:0 10px; font-size:0.6rem; background:linear-gradient(90deg,#6c63ff,#8b80ff); box-shadow:0 0 12px rgba(108,99,255,0.3); transform-origin:left center; animation:growBar 0.8s cubic-bezier(0.22,1,0.36,1) 0.4s both;">
+                                    Sep 2025 – now
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Legend -->
+                        <div class="flex gap-6 justify-center">
+                            <div class="flex items-center gap-2 text-slate-600" style="font-size:0.75rem;">
+                                <div class="w-2.5 h-2.5 rounded-full" style="background:#00d4aa;"></div>
+                                <p data-i18n="legend_education">Education</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-600" style="font-size:0.75rem;">
+                                <div class="w-2.5 h-2.5 rounded-full" style="background:#ff8c42;"></div>
+                                <p data-i18n="legend_internship">Internship</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-600" style="font-size:0.75rem;">
+                                <div class="w-2.5 h-2.5 rounded-full" style="background:#8b80ff;"></div>
+                                <p data-i18n="legend_work">Work</p>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
+
+                <!-- Animation keyframes — inline so no external CSS file needed -->
+                <style>
+                    @keyframes growBar {
+                        from {
+                            transform: scaleX(0);
+                            opacity: 0;
+                        }
+
+                        to {
+                            transform: scaleX(1);
+                            opacity: 1;
+                        }
+                    }
+                </style>
             </div>
         </main>
         <footer class="border-t border-border-dark bg-background-dark py-12">
@@ -620,7 +628,7 @@
     <script>
         const translations = {
             mn: {
-                intro_text: "Би API хөгжүүлэлт, системийн контейнержуулалт болон дэд бүтцийн бодит шийдлүүдийг бүтээдэг.",
+                intro_text: "Би API хөгжүүлэлт, системийн контейнержуулалт болон дэд бүтцийн бодит шийдлүүдийг бүтээдэг.\n                             Онол харахаас илүү практикт хэрэгжүүлж суралцах нь миний зарчим.",
                 about_nav: "Тухай",
                 stack_nav: "Чадварууд",
                 projects_nav: "Төслүүд",
