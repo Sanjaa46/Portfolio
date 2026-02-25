@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
 /* Dark mode via class */
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -23,6 +21,13 @@
   --radius-full: 9999px;
 }
 
+/* ─── Gantt / Experience Section ─────────────────────────────────────── */
+
+.gantt-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
 .gantt-wrapper::before {
   content: '';
   position: absolute;
@@ -30,9 +35,69 @@
   left: 0;
   right: 0;
   height: 2px;
+  border-radius: 2px 2px 0 0;
   background: linear-gradient(90deg, #6c63ff, #00d4aa);
 }
 
+/* Row track background */
+.gantt-track {
+  flex: 1;
+  height: 36px;
+  position: relative;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 1px solid #282e39;
+}
+
+/* Label column */
+.gantt-label {
+  width: 176px;
+  flex-shrink: 0;
+  padding-right: 1rem;
+}
+
+/* Bar base */
+.gantt-bar {
+  position: absolute;
+  top: 5px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.6rem;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  transform-origin: left center;
+  animation: growBar 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.gantt-bar:hover {
+  filter: brightness(1.2);
+}
+
+.bar-delay-1 { animation-delay: 0.1s; }
+.bar-delay-2 { animation-delay: 0.25s; }
+.bar-delay-3 { animation-delay: 0.4s; }
+
+.bar-edu {
+  background: linear-gradient(90deg, #1a6b4a, #00d4aa);
+  box-shadow: 0 0 12px rgba(0, 212, 170, 0.2);
+}
+
+.bar-intern {
+  background: linear-gradient(90deg, #6b3a1a, #ff8c42);
+  box-shadow: 0 0 12px rgba(255, 140, 66, 0.2);
+}
+
+.bar-work {
+  background: linear-gradient(90deg, #6c63ff, #8b80ff);
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.3);
+}
+
+/* Timeline cards (kept for future use) */
 .center-line::before {
   content: '';
   position: absolute;
@@ -64,12 +129,13 @@
   background: #1e1e2e;
 }
 
+/* ─── Animations ─────────────────────────────────────────────────────── */
+
 @keyframes growBar {
   from {
     transform: scaleX(0);
     opacity: 0;
   }
-
   to {
     transform: scaleX(1);
     opacity: 1;
@@ -81,61 +147,21 @@
     opacity: 0;
     transform: translateY(16px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.gantt-bar {
-  transform-origin: left center;
-  animation: growBar 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.bar-delay-1 {
-  animation-delay: 0.1s;
-}
-
-.bar-delay-2 {
-  animation-delay: 0.25s;
-}
-
-.bar-delay-3 {
-  animation-delay: 0.4s;
-}
-
 .tl-card {
   animation: fadeUp 0.6s ease both;
 }
 
-.card-delay-1 {
-  animation-delay: 0.1s;
-}
+.card-delay-1 { animation-delay: 0.1s; }
+.card-delay-2 { animation-delay: 0.25s; }
+.card-delay-3 { animation-delay: 0.4s; }
 
-.card-delay-2 {
-  animation-delay: 0.25s;
-}
-
-.card-delay-3 {
-  animation-delay: 0.4s;
-}
-
-.bar-edu {
-  background: linear-gradient(90deg, #1a6b4a, #00d4aa);
-  box-shadow: 0 0 12px rgba(0, 212, 170, 0.2);
-}
-
-.bar-intern {
-  background: linear-gradient(90deg, #6b3a1a, #ff8c42);
-  box-shadow: 0 0 12px rgba(255, 140, 66, 0.2);
-}
-
-.bar-work {
-  background: linear-gradient(90deg, #6c63ff, #8b80ff);
-  box-shadow: 0 0 12px rgba(108, 99, 255, 0.3);
-}
-
+/* Dot styles */
 .dot-work {
   background: #6c63ff;
   border-color: #6c63ff;
